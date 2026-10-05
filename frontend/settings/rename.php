@@ -55,7 +55,7 @@ if (!isset($_SESSION['login'])) {
 
     <!-- BACKGROUND -->
     <div class="absolute inset-0 -z-10 bg-cover bg-center"
-         style="background-image: url('/reshare/assets/images/background/bg3.jpg');">
+         style="background-image: url('../../assets/images/background/bg3.jpg');">
     <div class="absolute inset-0 bg-[#fafaf7]/40"></div>
     </div>
 
@@ -143,7 +143,7 @@ if (!isset($_SESSION['login'])) {
 
       <!-- RIGHT PANEL -->
       <div class="w-1/2 bg-cover bg-center flex items-center justify-center"
-           style="background-image: url('/reshare/assets/images/background/bg3.jpg');">
+           style="background-image: url('../../assets/images/background/bg3.jpg');">
         <div class="text-center">
           <img src="../../assets/images/logo/login.png"
                class="w-96 relative flex item-center justify-center"
