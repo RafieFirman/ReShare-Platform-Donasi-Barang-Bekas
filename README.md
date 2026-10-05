@@ -1,20 +1,471 @@
 # ReShare
 
-Platform donasi barang bekas berbasis PHP dan MySQL.
+> Platform donasi dan berbagi barang layak pakai untuk membantu sesama sekaligus mengurangi barang yang berakhir sebagai limbah.
 
-## Struktur utama
+ReShare adalah aplikasi web berbasis **PHP dan MySQL/MariaDB** yang memungkinkan pengguna untuk membagikan barang bekas yang masih layak pakai, menemukan barang yang tersedia, mengikuti event, serta mengelola informasi akun melalui satu platform.
 
-- frontend/ — halaman dan komponen antarmuka
-- backend/ — autentikasi, proses data, database access, dan utility
-- assets/ — gambar dan icon
-- database/ — SQL schema
-- js/ dan style/ — asset frontend global
-- .htaccess — entry routing aplikasi
+Project ini menggunakan struktur terpisah antara **frontend**, **backend**, **database**, dan **asset** agar kode lebih mudah dipelajari, dikembangkan, dan dipelihara.
 
-## Entry point
+---
 
-Aplikasi dibuka dari root project:
+## Fitur Utama
 
+### Authentication
+- Registrasi akun baru.
+- Login menggunakan username atau email.
+- Password disimpan menggunakan hashing.
+- Session-based authentication.
+- Logout melalui menu Pengaturan.
+
+### Berbagi Barang
+- Upload barang donasi.
+- Menentukan kategori barang.
+- Menentukan kondisi barang.
+- Menambahkan deskripsi, alamat, dan foto.
+- Melihat detail barang.
+- Menampilkan status barang yang masih tersedia atau sudah diambil.
+
+### Katalog
+- Melihat daftar barang yang tersedia.
+- Pencarian barang.
+- Filter berdasarkan kategori.
+- Melihat detail barang sebelum mengambilnya.
+
+### Event
+- Melihat daftar event.
+- Melihat detail event.
+- Upload dan menampilkan event.
+- Menampilkan poster, deskripsi, alamat, dan tanggal event.
+
+### Akun & Pengaturan
+Pengguna dapat mengelola:
+- Username.
+- Password.
+- Email.
+- Nomor telepon.
+- Logout.
+
+Menu **Pengaturan** menggunakan dropdown interaktif dan terhubung dengan session pengguna yang sedang login.
+
+### Dashboard/Home
+Halaman Home menyediakan:
+- Rekomendasi barang.
+- Kategori barang.
+- Event pilihan.
+- Leaderboard/donatur teratas.
+- Navigasi utama aplikasi.
+
+### Inbox
+Tersedia halaman inbox untuk aktivitas atau informasi terkait pengguna.
+
+---
+
+## Tech Stack
+
+| Teknologi | Penggunaan |
+|---|---|
+| **PHP** | Backend dan server-side rendering |
+| **MySQL / MariaDB** | Database |
+| **HTML5** | Struktur halaman |
+| **JavaScript** | Interaksi dropdown dan fitur frontend |
+| **Tailwind CSS** | Styling antarmuka |
+| **Apache (.htaccess)** | Routing entry point |
+| **XAMPP** | Local development environment |
+| **phpMyAdmin** | Import dan pengelolaan database |
+
+Tailwind CSS digunakan melalui CDN sehingga project ini tidak membutuhkan proses build Node.js/npm untuk menjalankannya.
+
+---
+
+## Struktur Project
+
+```text
+ReShare-Platform-Donasi-Barang-Bekas/
+│
+├── .htaccess
+├── README.md
+│
+├── assets/
+│   ├── events/
+│   ├── icons/
+│   └── images/
+│
+├── backend/
+│   ├── auth/
+│   ├── config/
+│   ├── events/
+│   ├── items/
+│   ├── leaderboard/
+│   ├── user/
+│   └── utils/
+│
+├── database/
+│   └── reshare_db.sql
+│
+├── frontend/
+│   ├── components/
+│   ├── settings/
+│   ├── detail_barang.php
+│   ├── detail_event.php
+│   ├── event.php
+│   ├── home.php
+│   ├── inbox.php
+│   ├── index.php
+│   ├── katalog.php
+│   ├── katalog_events.php
+│   ├── login.php
+│   ├── register.php
+│   ├── upload_barang.php
+│   ├── upload_event.php
+│   └── welcome.php
+│
+├── js/
+│   ├── back.js
+│   └── dropdown.js
+│
+└── style/
+    └── main.css
+```
+
+### Penjelasan folder
+
+**`frontend/`**  
+Berisi halaman yang langsung berinteraksi dengan pengguna, termasuk landing page, login, register, home, katalog, event, upload, inbox, dan pengaturan akun.
+
+**`frontend/components/`**  
+Berisi komponen yang digunakan ulang oleh beberapa halaman seperti navbar, dropdown Pengaturan, footer, card, dan leaderboard.
+
+**`frontend/settings/`**  
+Berisi halaman untuk mengubah username, password, email, dan nomor telepon.
+
+**`backend/`**  
+Berisi proses server-side untuk authentication, item, event, user, leaderboard, konfigurasi database, dan utility.
+
+**`database/`**  
+Berisi SQL dump untuk membuat database ReShare.
+
+**`assets/`**  
+Berisi gambar, ikon, poster event, logo, dan aset visual lainnya.
+
+**`js/`**  
+Berisi JavaScript global untuk interaksi frontend.
+
+**`style/`**  
+Berisi CSS global tambahan.
+
+---
+
+## Database
+
+Database utama project bernama:
+
+```text
+reshare_db
+```
+
+Schema database tersedia pada:
+
+```text
+database/reshare_db.sql
+```
+
+Database saat ini menggunakan beberapa tabel utama seperti:
+
+- `users` — data akun pengguna.
+- `items` — data barang donasi.
+- `events` — data event.
+
+Relasi foreign key digunakan antara data barang/event dengan pengguna.
+
+---
+
+## Persyaratan
+
+Sebelum menjalankan project, pastikan perangkat sudah memiliki:
+
+- **XAMPP**
+- **Apache**
+- **MySQL atau MariaDB**
+- **PHP 8.x atau kompatibel**
+- **phpMyAdmin**
+- Browser modern seperti Chrome, Edge, atau Firefox.
+
+---
+
+## Instalasi di Localhost
+
+### 1. Clone repository
+
+Masuk ke folder `htdocs` milik XAMPP:
+
+```bash
+cd C:\xampp\htdocs
+```
+
+Clone repository:
+
+```bash
+git clone https://github.com/RafieFirman/ReShare-Platform-Donasi-Barang-Bekas.git
+```
+
+Masuk ke folder project:
+
+```bash
+cd ReShare-Platform-Donasi-Barang-Bekas
+```
+
+---
+
+### 2. Jalankan XAMPP
+
+Buka XAMPP Control Panel lalu aktifkan:
+
+- **Apache**
+- **MySQL**
+
+---
+
+### 3. Buat database
+
+Buka:
+
+```text
+http://localhost/phpmyadmin
+```
+
+Buat database:
+
+```text
+reshare_db
+```
+
+Kemudian import:
+
+```text
+database/reshare_db.sql
+```
+
+---
+
+### 4. Konfigurasi database
+
+Secara default project menggunakan konfigurasi lokal:
+
+```text
+Host     : localhost
+Username : root
+Password : kosong
+Database : reshare_db
+```
+
+Konfigurasi dipusatkan di:
+
+```text
+backend/config/connection.php
+```
+
+Project juga mendukung environment variable berikut:
+
+```text
+RESHARE_DB_HOST
+RESHARE_DB_USER
+RESHARE_DB_PASS
+RESHARE_DB_NAME
+```
+
+Jika environment variable tidak diatur, project akan menggunakan konfigurasi default XAMPP di atas.
+
+---
+
+### 5. Jalankan aplikasi
+
+Buka URL sesuai nama folder project pada `htdocs`.
+
+Contoh:
+
+```text
+http://localhost/ReShare-Platform-Donasi-Barang-Bekas/
+```
+
+Atau apabila folder project kamu diberi nama `reshare`:
+
+```text
 http://localhost/reshare/
+```
 
-Root request diarahkan oleh .htaccess ke frontend/index.php. Alur halaman tetap sama: landing → login/register → welcome → home → fitur aplikasi.
+File `.htaccess` akan menangani request root dan mengarahkannya ke:
+
+```text
+frontend/index.php
+```
+
+---
+
+## Alur Aplikasi
+
+Alur utama aplikasi:
+
+```text
+Landing Page
+    │
+    ├── Get Started
+    │       │
+    │       └── Login / Register
+    │
+    └── Login
+            │
+            ▼
+        Welcome Page
+            │
+            ▼
+          Home
+            │
+    ┌───────┼────────┬────────┐
+    ▼       ▼        ▼        ▼
+  Donasi  Katalog   Event    Inbox
+    │       │        │
+    ▼       ▼        ▼
+  Upload   Detail   Detail
+```
+
+Pengelolaan akun dapat diakses melalui:
+
+```text
+Home
+  └── Pengaturan
+        ├── Ganti Username
+        ├── Ganti Password
+        ├── Ganti Email
+        ├── Ganti Nomor
+        └── Log Out
+```
+
+---
+
+## Konsep Routing
+
+Root aplikasi tidak menggunakan `index.php` di root project.
+
+Sebagai gantinya:
+
+```text
+Request /
+   │
+   ▼
+.htaccess
+   │
+   ▼
+frontend/index.php
+```
+
+Pendekatan ini menjaga struktur project tetap terpisah antara halaman frontend dan proses backend tanpa mengubah alur penggunaan aplikasi.
+
+---
+
+## Keamanan yang Digunakan
+
+Beberapa mekanisme yang sudah diterapkan:
+
+- Password menggunakan `password_hash()`.
+- Login menggunakan `password_verify()`.
+- Prepared statement untuk query yang menerima input pengguna.
+- Session digunakan untuk autentikasi.
+- Session ID diregenerasi setelah login berhasil.
+- Validasi input dilakukan pada proses registrasi dan perubahan akun.
+- Username dan email dibuat unik pada database.
+- Koneksi database menggunakan `mysqli` dengan mode exception.
+- Detail error database tidak ditampilkan langsung kepada pengguna.
+
+> Project ini masih ditujukan untuk kebutuhan pengembangan dan pembelajaran. Untuk deployment production, konfigurasi keamanan, secret management, CSRF protection, upload validation, rate limiting, dan hardening server masih perlu diperkuat.
+
+---
+
+## Troubleshooting
+
+### Database tidak terhubung
+
+Pastikan:
+
+1. MySQL/MariaDB pada XAMPP sedang aktif.
+2. Database bernama `reshare_db` sudah dibuat.
+3. File `database/reshare_db.sql` sudah di-import.
+4. Username/password database sesuai dengan konfigurasi di `backend/config/connection.php`.
+
+### Registrasi berhasil tetapi login gagal
+
+Periksa:
+
+- Apakah data pengguna benar-benar masuk ke tabel `users`.
+- Apakah email atau username yang digunakan saat login sesuai.
+- Apakah database yang dipakai aplikasi sama dengan database yang di-import di phpMyAdmin.
+
+### Perubahan kode dari GitHub belum terlihat
+
+Jalankan:
+
+```bash
+git pull origin main
+```
+
+Kemudian lakukan hard refresh pada browser:
+
+```text
+Ctrl + F5
+```
+
+---
+
+## Development
+
+Untuk berkontribusi pada project:
+
+```bash
+git checkout -b nama-branch
+```
+
+Setelah perubahan selesai:
+
+```bash
+git add .
+git commit -m "deskripsi perubahan"
+git push origin nama-branch
+```
+
+Kemudian buat Pull Request ke branch `main`.
+
+---
+
+## Project Status
+
+Project saat ini sudah memiliki alur utama yang dapat digunakan:
+
+- Landing page.
+- Register dan login.
+- Session authentication.
+- Home/dashboard pengguna.
+- Katalog barang.
+- Donasi barang.
+- Event.
+- Inbox.
+- Pengaturan akun.
+- Logout.
+- Database MySQL/MariaDB.
+- Struktur frontend dan backend yang terpisah.
+
+---
+
+## Author
+
+**Muhammad Rafie Firman Rusidy**
+
+Teknik Informatika — Universitas Negeri Surabaya
+
+GitHub: [@RafieFirman](https://github.com/RafieFirman)
+
+Repository: [ReShare - Platform Donasi Barang Bekas](https://github.com/RafieFirman/ReShare-Platform-Donasi-Barang-Bekas)
+
+---
+
+## License
+
+Belum ada lisensi open-source khusus yang ditetapkan pada repository ini.
