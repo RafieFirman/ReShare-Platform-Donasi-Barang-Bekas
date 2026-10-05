@@ -27,9 +27,9 @@ session_start();
     <div class="h-[80%] flex mt-20 mx-20 rounded-[40px] bg-[#fafaf7] overflow-hidden shadow-xl">
 
         <!-- BACK BUTTON -->
-        <a href="/reshare/frontend/login.php"
+        <a href="../login.php"
            class="absolute top-6 left-6 flex items-center gap-1 text-[#fafaf7]">
-            <img src="/reshare/assets/icons/back.svg" class="w-10 h-10">
+            <img src="../../assets/icons/back.svg" class="w-10 h-10">
             <span class="text-[25px] font-semibold text-[#3e5648]">Kembali</span>
         </a>
 
@@ -37,7 +37,7 @@ session_start();
         <div class="w-1/2 bg-[#3e5648] px-16 py-12 flex flex-col items-center justify-center">
 
             <div class="flex items-center gap-4 mb-6">
-                <img src="/reshare/assets/icons/password.svg" class="w-12 h-12">
+                <img src="../../assets/icons/password.svg" class="w-12 h-12">
                 <h1 class="text-5xl font-bold text-[#fafaf7]">
                     Lupa Password
                 </h1>
@@ -58,7 +58,7 @@ session_start();
 
             <!-- FORM -->
             <form method="POST"
-                  action="/reshare/backend/auth/reset_password.php"
+                  action="../../backend/auth/reset_password.php"
                   class="space-y-4 w-full max-w-md">
 
                 <div class="border-b-[3px] border-[#fafaf7]/80 mb-8"></div>
@@ -112,7 +112,7 @@ session_start();
         <!-- RIGHT PANEL -->
         <div class="w-1/2 bg-cover bg-center flex items-center justify-center"
              style="background-image: url('/reshare/assets/images/background/bg5.jpg');">
-            <img src="/reshare/assets/images/logo/login.png"
+            <img src="../../assets/images/logo/login.png"
                  class="w-96 drop-shadow-2xl">
         </div>
 
