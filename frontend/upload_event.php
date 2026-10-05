@@ -39,7 +39,7 @@
   <?php endif; ?>
 
    <form
-      action="/reshare/backend/events/add_event.php"
+      action="../backend/events/add_event.php"
       method="POST"
       enctype="multipart/form-data"
       class="grid grid-cols-1 lg:grid-cols-2 gap-20">
