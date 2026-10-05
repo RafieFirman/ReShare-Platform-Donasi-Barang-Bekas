@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['login'])) {
-    header("Location: /reshare/frontend/login.php");
+    header("Location: ../login.php");
     exit;
 }
 
@@ -42,7 +42,7 @@ $currentEmail = $_SESSION['email'];
         <a href="javascript:history.back()"
            class="absolute top-6 left-6 flex items-center gap-1
                   text-[#fafaf7] font-medium hover:opacity-80 transition">
-            <img src="/reshare/assets/icons/back.svg" class="w-10 h-10" alt="Back">
+            <img src="../../assets/icons/back.svg" class="w-10 h-10" alt="Back">
             <span class="text-[25px] font-semibold text-[#3e5648]">Kembali</span>
         </a>
 
@@ -52,7 +52,7 @@ $currentEmail = $_SESSION['email'];
             <!-- HEADER -->
             <div class="flex flex-col items-center text-center">
                 <div class="flex items-center gap-4">
-                    <img src="/reshare/assets/icons/email.svg" class="w-12 h-12">
+                    <img src="../../assets/icons/email.svg" class="w-12 h-12">
                     <h1 class="text-5xl font-semibold text-[#fafaf7]">
                         Ganti Email
                     </h1>
@@ -60,7 +60,7 @@ $currentEmail = $_SESSION['email'];
             </div>
 
             <!-- FORM -->
-            <form method="POST" action="/reshare/backend/user/update_email.php"
+            <form method="POST" action="../../backend/user/update_email.php"
                   class="space-y-3 w-full max-w-md">
 
                 <!-- Divider -->
@@ -107,7 +107,7 @@ $currentEmail = $_SESSION['email'];
         <div class="w-1/2 bg-cover bg-center flex items-center justify-center"
              style="background-image: url('/reshare/assets/images/background/bg5.jpg');">
             <div class="text-center">
-                <img src="/reshare/assets/images/logo/login.png"
+                <img src="../../assets/images/logo/login.png"
                      class="w-96 drop-shadow-2xl"
                      alt="ReShare Logo">
             </div>
@@ -116,6 +116,6 @@ $currentEmail = $_SESSION['email'];
     </div>
 </div>
 
-<script src="/js/back.js"></script>
+<script src="../../js/back.js"></script>
 </body>
 </html>
