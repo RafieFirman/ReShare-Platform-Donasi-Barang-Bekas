@@ -70,14 +70,14 @@ if (!isset($_SESSION['login'])) {
        class="absolute top-6 left-6 flex items-center gap-1
               text-[#fafaf7] font-medium hover:opacity-80 transition">
 
-        <img src="/reshare/assets/icons/back.svg" class="w-10 h-10" alt="Back">
+        <img src="../../assets/icons/back.svg" class="w-10 h-10" alt="Back">
         <span class="text-[25px] font-semibold text-[#3e5648]">Kembali</span>
     </a>
 
         <!-- HEADER -->
         <div class="flex flex-col items-center text-center">
         <div class="flex items-center gap-4">
-            <img src="/reshare/assets/icons/user.svg"
+            <img src="../../assets/icons/user.svg"
                 class="w-12 h-12"
                 alt="User Icon">
             <h1 class="text-5xl font-semibold text-[#fafaf7]">
@@ -145,7 +145,7 @@ if (!isset($_SESSION['login'])) {
       <div class="w-1/2 bg-cover bg-center flex items-center justify-center"
            style="background-image: url('/reshare/assets/images/background/bg3.jpg');">
         <div class="text-center">
-          <img src="/reshare/assets/images/logo/login.png"
+          <img src="../../assets/images/logo/login.png"
                class="w-96 relative flex item-center justify-center"
                alt="ReShare Logo">
         </div>
