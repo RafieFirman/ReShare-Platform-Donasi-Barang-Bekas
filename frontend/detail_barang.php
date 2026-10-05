@@ -33,7 +33,7 @@ require_once __DIR__ . '/../backend/items/get_detail.php';
     <a href="javascript:history.back()"
        class="absolute top-6 left-6 flex items-center gap-1
               text-[#fafaf7] font-medium hover:opacity-80 transition">
-        <img src="/reshare/assets/icons/back.svg" class="w-10 h-10" alt="Back">
+        <img src="../assets/icons/back.svg" class="w-10 h-10" alt="Back">
         <span class="text-[30px] font-semibold text-[#3e5648]">Kembali</span>
     </a>
 
@@ -41,7 +41,7 @@ require_once __DIR__ . '/../backend/items/get_detail.php';
 
         <!-- ================= LEFT : IMAGE ================= -->
         <div class="bg-white rounded-3xl p-10 shadow-xl flex items-center justify-center h-[480px] w-full">
-            <img src="/reshare/<?= htmlspecialchars($item['foto']); ?>"
+            <img src="../<?= htmlspecialchars($item['foto']); ?>"
                  class="w-full h-full rounded-3xl object-cover shadow">
         </div>
 
@@ -263,7 +263,7 @@ document.addEventListener('DOMContentLoaded', function () {
 
     const formData = new FormData(form);
 
-    fetch('/reshare/backend/items/req_item.php', {
+    fetch('../backend/items/req_item.php', {
       method: 'POST',
       body: formData
     })
