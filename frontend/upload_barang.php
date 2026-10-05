@@ -14,7 +14,7 @@
 
 <!-- ================= BACKGROUND ================= -->
 <div class="fixed inset-0 -z-10 bg-cover bg-center"
-     style="background-image:url('/reshare/assets/images/background/bg1.jpg');">
+     style="background-image:url('../assets/images/background/bg1.jpg');">
   <div class="absolute inset-0 bg-white/70 backdrop-blur-sm"></div>
 </div>
 
