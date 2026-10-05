@@ -34,13 +34,13 @@ require_once __DIR__ . '/../backend/events/get_detail_event.php';
     class="absolute top-6 left-6 flex items-center gap-1
           text-[#fafaf7] font-medium hover:opacity-80 transition">
 
-    <img src="/reshare/assets/icons/back.svg" class="w-10 h-10" alt="Back">
+    <img src="../assets/icons/back.svg" class="w-10 h-10" alt="Back">
     <span class="text-[30px] font-semibold text-[#3e5648]">Kembali</span>
     </a>
 
         <!-- ================= LEFT : IMAGE SLIDER ================= -->
         <div class="bg-white rounded-3xl p-10 shadow-xl flex flex-col justify-between min-h-[480px]">
-                 <img src="/reshare/assets/images/events/<?= htmlspecialchars($event['poster']); ?>"
+                 <img src="../assets/images/events/<?= htmlspecialchars($event['poster']); ?>"
                         class="w-full h-full rounded-3xl object-cover shadow">
         </div>
 
