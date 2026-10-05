@@ -151,7 +151,7 @@ if (isset($_SESSION['user_id'])) {
 
     </div>
 
-    <script src="../js/darkmode.js"></script>
+
 
 <script>
     document.addEventListener("DOMContentLoaded", () => {
