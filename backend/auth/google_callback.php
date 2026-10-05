@@ -48,5 +48,5 @@ $_SESSION['avatar']    = $userInfo->picture;
 $_SESSION['login_via'] = 'google';
 
 // Redirect ke halaman setelah login
-header('Location: /reshare/frontend/home.php');
+header('Location: ../../frontend/home.php');
 exit;
