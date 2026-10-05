@@ -39,7 +39,7 @@ require_once __DIR__ . '/../backend/leaderboard/top_donatur.php';
   <title>Home | ReShare</title>
   <script src="https://cdn.tailwindcss.com"></script>
   <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="main.css">
+  <link rel="stylesheet" href="../style/main.css">
 </head>
 
 
