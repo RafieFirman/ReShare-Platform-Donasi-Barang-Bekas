@@ -30,7 +30,7 @@ if (!isset($_SESSION['login'])) {
         Pengaturan
       </button>
 
-      <?php include 'components/dropdown_setting.php'; ?>
+      <?php include __DIR__ . '/dropdown_setting.php'; ?>
     </div>
 
   </div>
