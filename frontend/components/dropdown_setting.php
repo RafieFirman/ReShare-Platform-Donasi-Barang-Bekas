@@ -61,10 +61,10 @@ $badgeData    = $userBadgeKey ? ($badgeMap[$userBadgeKey] ?? null) : null;
   <div class="p-5 space-y-4">
     <?php
       $settings = [
-        ['Ganti Username','user.svg','/reshare/frontend/settings/rename.php'],
-        ['Ganti Password','password.svg','/reshare/frontend/settings/ganti_password.php'],
-        ['Ganti Email','email.svg','/reshare/frontend/settings/ganti_email.php'],
-        ['Ganti Nomor','kontak.svg','/reshare/frontend/settings/ganti_nomor.php'],
+        ['Ganti Username','user.svg','settings/rename.php'],
+        ['Ganti Password','password.svg','settings/ganti_password.php'],
+        ['Ganti Email','email.svg','settings/ganti_email.php'],
+        ['Ganti Nomor','kontak.svg','settings/ganti_nomor.php'],
       ];
     ?>
 
