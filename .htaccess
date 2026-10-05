@@ -1,0 +1,9 @@
+# ReShare application entry routing
+# Root URL: http://localhost/reshare/
+
+Options -Indexes
+
+RewriteEngine On
+
+# Keep the browser URL at /reshare/ while serving the frontend entry page.
+RewriteRule ^$ frontend/index.php [L]
