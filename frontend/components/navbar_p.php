@@ -34,5 +34,5 @@ if (!isset($_SESSION['login'])) {
     </div>
 
   </div>
-  <script src="/js/dropdown .js"></script>
+  <script src="../js/dropdown.js"></script>
 </header>
