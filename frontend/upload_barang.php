@@ -38,7 +38,7 @@
     <?php unset($_SESSION['error']); ?>
   <?php endif; ?>
 
-  <form action="/reshare/backend/items/add_item.php"
+  <form action="../backend/items/add_item.php"
         method="POST"
         enctype="multipart/form-data"
         class="grid grid-cols-1 lg:grid-cols-2 gap-20">
@@ -120,7 +120,7 @@
             class="w-full mt-2 rounded-2xl px-5 py-3 bg-slate-50 flex justify-between items-center transition shadow-sm hover:shadow-md">
 
                 <span id="kategoriValue" class="flex gap-2 items-center">
-                  <img src="/reshare/assets/icons/elektronik_h.svg" class="w-5" alt="">
+                  <img src="../assets/icons/elektronik_h.svg" class="w-5" alt="">
                   Elektronik
                 </span>
                 <span><img src="../assets/icons/back.svg" alt="" class="flex justify-start w-7 h7 rotate-[270deg]"></span>
@@ -133,22 +133,22 @@
 
                 <button type="button" onclick="setKategori('Elektronik','elektronik_h.svg')"
                         class="flex gap-3 items-center w-full px-4 py-3 rounded-xl bg-[#3e5648] text-[#fafaf7]">
-                  <img src="/reshare/assets/icons/elektronik.svg" class="w-5" alt=""> Elektronik
+                  <img src="../assets/icons/elektronik.svg" class="w-5" alt=""> Elektronik
                 </button>
 
                 <button type="button" onclick="setKategori('Pakaian','pakaian_h.svg')"
                         class="flex gap-3 items-center w-full px-4 py-3 rounded-xl bg-[#3e5648] text-[#fafaf7]">
-                  <img src="/reshare/assets/icons/pakaian.svg" class="w-5" alt=""> Pakaian
+                  <img src="../assets/icons/pakaian.svg" class="w-5" alt=""> Pakaian
                 </button>
 
                 <button type="button" onclick="setKategori('Rumah Tangga','rumahtangga_h.svg')"
                         class="flex gap-3 items-center w-full px-4 py-3 rounded-xl bg-[#3e5648] text-[#fafaf7]">
-                  <img src="/reshare/assets/icons/rumahtangga.svg" class="w-5" alt=""> Rumah Tangga
+                  <img src="../assets/icons/rumahtangga.svg" class="w-5" alt=""> Rumah Tangga
                 </button>
 
                 <button type="button" onclick="setKategori('Buku','buku_h.svg')"
                         class="flex gap-3 items-center w-full px-4 py-3 rounded-xl bg-[#3e5648] text-[#fafaf7]">
-                  <img src="/reshare/assets/icons/buku.svg" class="w-5" alt=""> Buku
+                  <img src="../assets/icons/buku.svg" class="w-5" alt=""> Buku
                 </button>
 
               </div>
@@ -322,7 +322,7 @@ function setKategori(text, icon) {
   const value = document.getElementById('kategoriValue');
   const menu  = document.getElementById('kategoriMenu');
 
-  value.innerHTML = `<img src="/reshare/assets/icons/${icon}" class="w-5" alt=""> ${text}`;
+  value.innerHTML = `<img src="../assets/icons/${icon}" class="w-5" alt=""> ${text}`;
   document.getElementById('kategoriInput').value = text;
 
   menu.classList.add(
