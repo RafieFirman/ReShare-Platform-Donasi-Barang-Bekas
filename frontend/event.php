@@ -118,7 +118,7 @@ include 'components/navbar_h.php';
         <!-- POSTER -->
         <div class="h-72 bg-[#fafaf7] flex items-center justify-center">
             <img
-            src="/reshare/assets/images/events/<?= htmlspecialchars($event['poster']); ?>"
+            src="../assets/images/events/<?= htmlspecialchars($event['poster']); ?>"
             alt="<?= htmlspecialchars($event['title']); ?>"
             class="max-h-full max-w-full object-contain
                     transition-transform duration-300
@@ -151,7 +151,7 @@ include 'components/navbar_h.php';
 
 </section>
 
-<script src="/js/dropdown .js"></script>
+<script src="../js/dropdown.js"></script>
 
 <?php include 'components/footer.php'; ?>
 
