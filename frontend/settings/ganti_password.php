@@ -2,7 +2,7 @@
 session_start();
 
 if (!isset($_SESSION['login'])) {
-    header("Location: /reshare/frontend/login.php");
+    header("Location: ../login.php");
     exit;
 }
 ?>
@@ -56,7 +56,7 @@ if (!isset($_SESSION['login'])) {
         <!-- BACK BUTTON -->
         <a href="javascript:history.back()"
            class="absolute top-6 left-6 flex items-center gap-1 text-[#fafaf7]">
-            <img src="/reshare/assets/icons/back.svg" class="w-10 h-10">
+            <img src="../../assets/icons/back.svg" class="w-10 h-10">
             <span class="text-[25px] font-semibold text-[#3e5648]">Kembali</span>
         </a>
 
@@ -64,7 +64,7 @@ if (!isset($_SESSION['login'])) {
         <div class="w-1/2 bg-[#3e5648] px-16 py-12 flex flex-col items-center justify-center">
 
             <div class="flex items-center gap-4 mb-6">
-                <img src="/reshare/assets/icons/password.svg" class="w-12 h-12">
+                <img src="../../assets/icons/password.svg" class="w-12 h-12">
                 <h1 class="text-5xl font-bold text-[#fafaf7]">
                     Ganti Password
                 </h1>
@@ -72,7 +72,7 @@ if (!isset($_SESSION['login'])) {
 
             <!-- FORM -->
             <form method="POST"
-                  action="/reshare/backend/user/update_password.php"
+                  action="../../backend/user/update_password.php"
                   class="space-y-4 w-full max-w-md">
 
                 <div class="border-b-[3px] border-[#fafaf7]/80 mb-8"></div>
@@ -146,7 +146,7 @@ if (!isset($_SESSION['login'])) {
         <!-- RIGHT PANEL -->
         <div class="w-1/2 bg-cover bg-center flex items-center justify-center"
              style="background-image: url('/reshare/assets/images/background/bg5.jpg');">
-            <img src="/reshare/assets/images/logo/login.png"
+            <img src="../../assets/images/logo/login.png"
                  class="w-96 drop-shadow-2xl">
         </div>
 
