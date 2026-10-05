@@ -19,7 +19,7 @@ session_start();
 
     <!-- BACKGROUND -->
     <div class="absolute inset-0 -z-10 bg-cover bg-center"
-         style="background-image: url('/reshare/assets/images/background/bg5.jpg');">
+         style="background-image: url('../../assets/images/background/bg5.jpg');">
         <div class="absolute inset-0 bg-[#fafaf7]/40"></div>
     </div>
 
@@ -111,7 +111,7 @@ session_start();
 
         <!-- RIGHT PANEL -->
         <div class="w-1/2 bg-cover bg-center flex items-center justify-center"
-             style="background-image: url('/reshare/assets/images/background/bg5.jpg');">
+             style="background-image: url('../../assets/images/background/bg5.jpg');">
             <img src="../../assets/images/logo/login.png"
                  class="w-96 drop-shadow-2xl">
         </div>
