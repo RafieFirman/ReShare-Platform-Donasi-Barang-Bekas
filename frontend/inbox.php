@@ -92,7 +92,7 @@
   <!-- BACK -->
   <a href="javascript:history.back()"
     class="fixed top-6 left-6 flex items-center gap-2 z-50">
-    <img src="/reshare/assets/icons/back.svg" class="w-10 h-10">
+    <img src="../assets/icons/back.svg" class="w-10 h-10">
     <span class="text-[30px] font-semibold">Kembali</span>
   </a>
 
@@ -159,7 +159,7 @@
   <?php foreach ($myRequests as $r): ?>
     <div class="bg-white p-4 rounded-xl shadow flex gap-4">
 
-      <img src="/reshare/<?= htmlspecialchars($r['foto']); ?>"
+      <img src="../<?= htmlspecialchars($r['foto']); ?>"
            class="w-20 h-20 rounded-lg object-cover">
 
       <div class="flex-1">
@@ -210,7 +210,7 @@
         <?php foreach ($requests as $r): ?>
           <div class="bg-white p-4 rounded-xl shadow flex gap-4">
 
-            <img src="/reshare/<?= htmlspecialchars($r['foto']); ?>"
+            <img src="../<?= htmlspecialchars($r['foto']); ?>"
                 class="w-20 h-20 rounded-lg object-cover">
 
             <div class="flex-1">
