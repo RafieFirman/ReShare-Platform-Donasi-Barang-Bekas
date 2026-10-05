@@ -1,5 +1,6 @@
 <?php
-include 'components/navbar_p.php'; ?>
+session_start();
+include __DIR__ . '/components/navbar_p.php'; ?>
 
 <!DOCTYPE html>
 <html lang="id">
