@@ -15,9 +15,9 @@
 
   <!-- ================= BACKGROUND SLIDER ================= -->
   <div class="absolute inset-0 -z-10">
-    <div class="bg-slide active" style="background-image:url('/reshare/assets/images/background/slide1.jpg')"></div>
-    <div class="bg-slide" style="background-image:url('/reshare/assets/images/background/slide2.jpg')"></div>
-    <div class="bg-slide" style="background-image:url('/reshare/assets/images/background/slide3.jpg')"></div>
+    <div class="bg-slide active" style="background-image:url('../assets/images/background/slide1.jpg')"></div>
+    <div class="bg-slide" style="background-image:url('../assets/images/background/slide2.jpg')"></div>
+    <div class="bg-slide" style="background-image:url('../assets/images/background/slide3.jpg')"></div>
   </div>
 
   <!-- Overlay -->
