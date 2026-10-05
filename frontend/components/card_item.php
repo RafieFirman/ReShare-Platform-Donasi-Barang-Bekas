@@ -18,7 +18,7 @@ $badgeClass = match($item['kondisi']) {
 
   <!-- IMAGE -->
   <img
-    src="/reshare/<?= htmlspecialchars($item['foto']); ?>"
+    src="../../<?= htmlspecialchars($item['foto']); ?>"
     class="w-full h-full object-cover"
     alt="<?= htmlspecialchars($item['nama_barang']); ?>"
   >
@@ -48,7 +48,7 @@ $badgeClass = match($item['kondisi']) {
   <!-- FOTO -->
   <div class="w-28 h-28 flex-shrink-0 rounded-xl overflow-hidden bg-gray-100">
     <img
-      src="/reshare/<?= htmlspecialchars($item['foto']); ?>"
+      src="../../<?= htmlspecialchars($item['foto']); ?>"
       class="w-full h-full object-cover"
       alt="<?= htmlspecialchars($item['nama_barang']); ?>">
   </div>
@@ -78,7 +78,7 @@ $badgeClass = match($item['kondisi']) {
 
       <!-- DONATUR -->
       <div class="flex items-center gap-2 text-xs text-gray-500">
-        <img src="/reshare/assets/icons/user_h.svg"
+        <img src="../../assets/icons/user_h.svg"
             alt="Donatur"
             class="w-4 h-4 opacity-70">
         <span class="font-medium">
@@ -109,7 +109,7 @@ $badgeClass = match($item['kondisi']) {
             hover:shadow-md transition">
 
   <div class="w-20 h-20 rounded-lg overflow-hidden bg-gray-100">
-    <img src="/reshare/<?= htmlspecialchars($item['foto']); ?>"
+    <img src="../../<?= htmlspecialchars($item['foto']); ?>"
          class="w-full h-full object-cover">
   </div>
 
