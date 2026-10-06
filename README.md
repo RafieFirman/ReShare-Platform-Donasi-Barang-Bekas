@@ -390,7 +390,7 @@ GitHub: [@RafieFirman](https://github.com/RafieFirman)
 
 **Erlangga Aghna Fatah**
 Teknik Informatika — Universitas Negeri Surabaya
-github: [@
+github: [@Erlanggaaghnaf](https://github.com/Erlanggaaghnaf)
 
 
 Repository: [ReShare - Platform Donasi Barang Bekas](https://github.com/RafieFirman/ReShare-Platform-Donasi-Barang-Bekas)
