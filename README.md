@@ -380,80 +380,6 @@ Beberapa mekanisme yang sudah diterapkan:
 
 ---
 
-## Troubleshooting
-
-### Database tidak terhubung
-
-Pastikan:
-
-1. MySQL/MariaDB pada XAMPP sedang aktif.
-2. Database bernama `reshare_db` sudah dibuat.
-3. File `database/reshare_db.sql` sudah di-import.
-4. Username/password database sesuai dengan konfigurasi di `backend/config/connection.php`.
-
-### Registrasi berhasil tetapi login gagal
-
-Periksa:
-
-- Apakah data pengguna benar-benar masuk ke tabel `users`.
-- Apakah email atau username yang digunakan saat login sesuai.
-- Apakah database yang dipakai aplikasi sama dengan database yang di-import di phpMyAdmin.
-
-### Perubahan kode dari GitHub belum terlihat
-
-Jalankan:
-
-```bash
-git pull origin main
-```
-
-Kemudian lakukan hard refresh pada browser:
-
-```text
-Ctrl + F5
-```
-
----
-
-## Development
-
-Untuk berkontribusi pada project:
-
-```bash
-git checkout -b nama-branch
-```
-
-Setelah perubahan selesai:
-
-```bash
-git add .
-git commit -m "deskripsi perubahan"
-git push origin nama-branch
-```
-
-Kemudian buat Pull Request ke branch `main`.
-
----
-
-## Project Status
-
-Project saat ini sudah memiliki alur utama yang dapat digunakan:
-
-- Landing page.
-- Register dan login.
-- Session authentication.
-- Home/dashboard pengguna.
-- Katalog barang.
-- Donasi barang.
-- Event.
-- Inbox.
-- Pengaturan akun.
-- Logout.
-- Database MySQL/MariaDB.
-- Struktur frontend dan backend yang terpisah.
-
----
-
 ## Author
 
 **Muhammad Rafie Firman Rusidy**
@@ -461,6 +387,11 @@ Project saat ini sudah memiliki alur utama yang dapat digunakan:
 Teknik Informatika — Universitas Negeri Surabaya
 
 GitHub: [@RafieFirman](https://github.com/RafieFirman)
+
+**Erlangga Aghna Fatah**
+Teknik Informatika — Universitas Negeri Surabaya
+github: [@
+
 
 Repository: [ReShare - Platform Donasi Barang Bekas](https://github.com/RafieFirman/ReShare-Platform-Donasi-Barang-Bekas)
 
